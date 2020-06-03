@@ -31,7 +31,7 @@ get_srag_minsaude <- function(dir = "outputs",
     '[['("arquivo_srag") %>%
     '[['("url")
 
-  destination <- file.path(dir, paste0(filename, '.csv'))
+  destination <- file.path(tempdir(), paste0(filename, '.csv'))
 
   utils::download.file(url, destination)
 
